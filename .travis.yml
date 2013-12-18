@@ -5,8 +5,8 @@ perl:
 #      #- "5.14"
 #      #- "5.12"
 #
-#before_install:
-#    - cpanm Test::Pod # optional dependency
+before_install:
+    - cpanm Test::More
 
 #install:
 #    - cpanm -v --installdeps --notest --mirror http://cpan.mirrors.travis-ci.org .
