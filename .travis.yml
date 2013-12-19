@@ -8,7 +8,10 @@ perl:
 before_install:
     - cpanm Test::More
 
-#install:
-#    - cpanm -v --installdeps --notest --mirror http://cpan.mirrors.travis-ci.org .
+install:
+    - cpanm -v --installdeps --notest --mirror http://cpan.mirrors.travis-ci.org . || cat ~/.cpanm/build.log"
 
 script: perl Makefile.PL && make test
+
+after_failure: 
+    - "cat ~/.cpanm/build.log"
