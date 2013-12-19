@@ -9,7 +9,7 @@ before_install:
     - cpanm Test::More
 
 install:
-    - cpanm -v --installdeps --notest --mirror http://cpan.mirrors.travis-ci.org . || cat ~/.cpanm/build.log"
+    - cpanm -v --installdeps --notest --mirror http://cpan.mirrors.travis-ci.org . || cat ~/.cpanm/build.log
 
 script: perl Makefile.PL && make test
 
